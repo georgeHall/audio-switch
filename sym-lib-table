@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name MCU_RaspberryPi_and_Boards)(type Legacy)(uri ${KIPRJMOD}/libs/RP_Silicon_KiCad/KiCadLibraries/MCU_RaspberryPi_and_Boards.lib)(options "")(descr ""))
+  (lib (name MX_Alps_Hybrid)(type Legacy)(uri ${KIPRJMOD}/libs/RP_Silicon_KiCad/KiCadLibraries/MX_Alps_Hybrid.lib)(options "")(descr ""))
+)

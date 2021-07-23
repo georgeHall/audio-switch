@@ -1,4 +1,202 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_RaspberryPi_and_Boards:Pico U1
+U 1 1 60FA7034
+P 1900 2050
+F 0 "U1" H 1900 3265 50  0000 C CNN
+F 1 "Pico" H 1900 3174 50  0000 C CNN
+F 2 "RPi_Pico:RPi_Pico_SMD_TH" V 1900 2050 50  0001 C CNN
+F 3 "" H 1900 2050 50  0001 C CNN
+	1    1900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D1
+U 1 1 60FA988D
+P 1650 6050
+F 0 "D1" H 1650 6257 50  0000 C CNN
+F 1 "D_Small" H 1650 6166 50  0000 C CNN
+F 2 "" V 1650 6050 50  0001 C CNN
+F 3 "~" V 1650 6050 50  0001 C CNN
+	1    1650 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D3
+U 1 1 60FB9127
+P 2450 6050
+F 0 "D3" H 2450 6257 50  0000 C CNN
+F 1 "D_Small" H 2450 6166 50  0000 C CNN
+F 2 "" V 2450 6050 50  0001 C CNN
+F 3 "~" V 2450 6050 50  0001 C CNN
+	1    2450 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-LED MX3
+U 1 1 60FB912D
+P 2700 5550
+F 0 "MX3" H 2782 5774 60  0000 C CNN
+F 1 "MX-LED" H 2782 5700 20  0000 C CNN
+F 2 "" H 2075 5525 60  0001 C CNN
+F 3 "" H 2075 5525 60  0001 C CNN
+	1    2700 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2200 5150 0    50   Input ~ 0
+Col0
+Text GLabel 3000 5150 0    50   Input ~ 0
+Col1
+Text GLabel 1450 6100 0    50   Input ~ 0
+Row0
+Wire Wire Line
+	2200 5150 2200 5450
+Wire Wire Line
+	2200 5450 2050 5450
+Wire Wire Line
+	2050 5450 2050 5500
+Wire Wire Line
+	2850 5500 2850 5450
+Wire Wire Line
+	2850 5450 3000 5450
+Wire Wire Line
+	3000 5450 3000 5150
+Wire Wire Line
+	2550 6050 2600 6050
+Wire Wire Line
+	2600 6050 2600 5700
+Wire Wire Line
+	2600 5700 2650 5700
+Wire Wire Line
+	1550 6050 1550 6100
+Wire Wire Line
+	1550 6100 1450 6100
+$Comp
+L Device:D_Small D?
+U 1 1 60FDE3E0
+P 1650 6900
+F 0 "D?" H 1650 7107 50  0000 C CNN
+F 1 "D_Small" H 1650 7016 50  0000 C CNN
+F 2 "" V 1650 6900 50  0001 C CNN
+F 3 "~" V 1650 6900 50  0001 C CNN
+	1    1650 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-LED MX?
+U 1 1 60FDE3E6
+P 1900 6400
+F 0 "MX?" H 1982 6624 60  0000 C CNN
+F 1 "MX-LED" H 1982 6550 20  0000 C CNN
+F 2 "" H 1275 6375 60  0001 C CNN
+F 3 "" H 1275 6375 60  0001 C CNN
+	1    1900 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 60FDE3ED
+P 2450 6900
+F 0 "D?" H 2450 7107 50  0000 C CNN
+F 1 "D_Small" H 2450 7016 50  0000 C CNN
+F 2 "" V 2450 6900 50  0001 C CNN
+F 3 "~" V 2450 6900 50  0001 C CNN
+	1    2450 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-LED MX?
+U 1 1 60FDE3F3
+P 2700 6400
+F 0 "MX?" H 2782 6624 60  0000 C CNN
+F 1 "MX-LED" H 2782 6550 20  0000 C CNN
+F 2 "" H 2075 6375 60  0001 C CNN
+F 3 "" H 2075 6375 60  0001 C CNN
+	1    2700 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5450 2200 6300
+Wire Wire Line
+	2200 6300 2050 6300
+Wire Wire Line
+	2050 6300 2050 6350
+Connection ~ 2200 5450
+Wire Wire Line
+	2850 6350 2850 6300
+Wire Wire Line
+	2850 6300 3000 6300
+Wire Wire Line
+	3000 6300 3000 5450
+Connection ~ 3000 5450
+$Comp
+L MX_Alps_Hybrid:MX-LED MX1
+U 1 1 60FAEA96
+P 1900 5550
+F 0 "MX1" H 1982 5774 60  0000 C CNN
+F 1 "MX-LED" H 1982 5700 20  0000 C CNN
+F 2 "" H 1275 5525 60  0001 C CNN
+F 3 "" H 1275 5525 60  0001 C CNN
+	1    1900 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5700 1800 5700
+Wire Wire Line
+	1800 5700 1800 6050
+Wire Wire Line
+	1800 6050 1750 6050
+Wire Wire Line
+	1550 6100 2350 6100
+Wire Wire Line
+	2350 6100 2350 6050
+Connection ~ 1550 6100
+Text GLabel 1450 6950 0    50   Input ~ 0
+Row1
+Wire Wire Line
+	1450 6950 1550 6950
+Wire Wire Line
+	1550 6950 1550 6900
+Wire Wire Line
+	1550 6950 2350 6950
+Wire Wire Line
+	2350 6950 2350 6900
+Connection ~ 1550 6950
+Wire Wire Line
+	1750 6900 1800 6900
+Wire Wire Line
+	1800 6900 1800 6550
+Wire Wire Line
+	1800 6550 1850 6550
+Wire Wire Line
+	2550 6900 2600 6900
+Wire Wire Line
+	2600 6900 2600 6550
+Wire Wire Line
+	2600 6550 2650 6550
+$Comp
+L Device:R_Small R?
+U 1 1 60FF203B
+P 950 5350
+F 0 "R?" H 1009 5396 50  0000 L CNN
+F 1 "R_Led" H 1009 5305 50  0000 L CNN
+F 2 "" H 950 5350 50  0001 C CNN
+F 3 "~" H 950 5350 50  0001 C CNN
+	1    950  5350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

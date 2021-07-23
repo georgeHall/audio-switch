@@ -3,5 +3,6 @@
   (lib (name Kailh_Choc)(type KiCad)(uri ${KIPRJMOD}/libs/MX_Alps_Hybrid/Kailh_Choc.pretty)(options "")(descr ""))
   (lib (name MX_Alps_Hybrid)(type KiCad)(uri ${KIPRJMOD}/libs/MX_Alps_Hybrid/MX_Alps_Hybrid.pretty)(options "")(descr ""))
   (lib (name MX_Only)(type KiCad)(uri ${KIPRJMOD}/libs/MX_Alps_Hybrid/MX_Only.pretty)(options "")(descr ""))
-  (lib (name MCU_RaspberryPi_and_Boards)(type KiCad)(uri ${KIPRJMOD}/libs/RP_Silicon_KiCad/KiCadLibraries/MCU_RaspberryPi_and_Boards.pretty)(options "")(descr ""))
+  (lib (name pi)(type KiCad)(uri ${KIPRJMOD}/libs/RP_Silicon_KiCad/KiCadLibraries/MCU_RaspberryPi_and_Boards.pretty)(options "")(descr ""))
+  (lib (name CD4052BM)(type KiCad)(uri ${KIPRJMOD}/libs/CD4052BM/CD4052BM.pretty)(options "")(descr ""))
 )

@@ -21,17 +21,10 @@ const int select_a = 19;
 const int select_b = 20;
 
 enum inputJack { ONE, TWO, THREE, FOUR };
-inputJack input_jack = ONE;
 const inputJack matrix[length_of_cols][length_of_rows] = {{ ONE, THREE }, { TWO, FOUR }};
 
 void setup() {
   setupPins();
-}
-
-void loop() {
-  input_jack = selectInput();
-  lightLed(input_jack);
-  
 }
 
 void setupPins() {
@@ -47,20 +40,6 @@ void setupPins() {
 
   pinMode(select_a, OUTPUT);
   pinMode(select_b, OUTPUT);
-}
-
-inputJack selectInput() {
-   inputJack result = input_jack;
-
-    for(int col : cols) {
-      for(int row: rows) {
-        if(digitalRead(row) == HIGH) {
-          return matrix[col][row];
-        }
-      }
-      delay(delay_in_micro_seconds/length_of_cols);
-    }
-   return result; 
 }
 
 void lightLed(inputJack jack) {
@@ -88,4 +67,40 @@ void lightLed(inputJack jack) {
       break;
     default:
       break;
+  }
+}
+
+void setOutput(inputJack jack) {
+   switch(jack) {
+    case ONE:
+      digitalWrite(select_a, LOW);
+      digitalWrite(select_b, LOW);
+      break;
+    case TWO:
+      digitalWrite(select_a, HIGH);
+      digitalWrite(select_b, LOW);
+      break;
+    case THREE:
+      digitalWrite(select_a, LOW);
+      digitalWrite(select_b, HIGH);
+      break;
+    case FOUR:
+      digitalWrite(select_a, HIGH);
+      digitalWrite(select_b, HIGH);
+      break;
+    default:
+      break;
+   }
+}
+
+void loop() {
+  for(int col : cols) {
+      for(int row: rows) {
+        if(digitalRead(row) == HIGH) {
+          setOutput(matrix[col][row]);
+          lightLed(matrix[col][row]);
+        }
+      }
+      delay(delay_in_micro_seconds/length_of_cols);
+    }
 }

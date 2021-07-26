@@ -2,13 +2,8 @@
 
 const int delay_in_micro_seconds = 100;
 
-const int col_0 = 9;
-const int col_1 = 10;
-const int row_0 = 6;
-const int row_1 = 7;
-
-const int cols[] = {col_0, col_1};
-const int rows[] = {row_0, row_1};
+const int cols[] = {9, 10};
+const int rows[] = {6, 7};
 const int length_of_cols = 2;
 const int length_of_rows = 2;
 
@@ -24,14 +19,12 @@ enum inputJack { ONE, TWO, THREE, FOUR };
 const inputJack matrix[length_of_cols][length_of_rows] = {{ ONE, THREE }, { TWO, FOUR }};
 
 void setup() {
-  setupPins();
-}
-
-void setupPins() {
-  pinMode(col_0, OUTPUT);
-  pinMode(col_1, OUTPUT);
-  pinMode(row_0, INPUT_PULLDOWN);
-  pinMode(row_1, INPUT_PULLDOWN);
+  for(int col : cols) {
+    pinMode(col, OUTPUT);
+  }
+  for(int row : rows) {
+    pinMode(row, INPUT_PULLDOWN);
+  }
   
   pinMode(led_col_0, OUTPUT);
   pinMode(led_col_1, OUTPUT);

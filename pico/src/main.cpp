@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+#include "output.h"
+
 const int delay_in_micro_seconds = 20;
 
 const int cols[] = {9, 10};
@@ -15,8 +17,12 @@ const int led_row_1 = 2;
 const int select_a = 19;
 const int select_b = 20;
 
-enum inputJack { ONE, TWO, THREE, FOUR };
-const inputJack matrix[length_of_cols][length_of_rows] = {{ ONE, THREE }, { TWO, FOUR }};
+const Output matrix[length_of_cols][length_of_rows] = {{ one, three }, { two, four }};
+
+const Output one(LOW,LOW,HIGH,LOW,LOW,HIGH);
+const Output two(HIGH,LOW,HIGH,LOW,HIGH,LOW);
+const Output three(LOW,HIGH,LOW,LOW,HIGH,HIGH);
+const Output four(HIGH,HIGH,LOW,LOW,HIGH,HIGH);
 
 void setup() {
   for(int col : cols) {
@@ -35,60 +41,21 @@ void setup() {
   pinMode(select_b, OUTPUT);
 }
 
-void setPins(inputJack jack) {
-  // Set LED pins so no light is on.
-  digitalWrite(led_row_0, HIGH);
-  digitalWrite(led_row_1, HIGH);
-  digitalWrite(led_col_0, LOW);
-  digitalWrite(led_col_1, LOW);
+void setPin(Output o) {
+  digitalWrite(led_row_0, o.led_row_0);
+  digitalWrite(led_row_1, o.led_row_1);
+  digitalWrite(led_col_0, o.led_col_0);
+  digitalWrite(led_col_1, o.led_col_1);
 
-  switch(jack) {
-    case ONE:
-      // Activate LED 1
-      digitalWrite(led_col_0, HIGH);
-      digitalWrite(led_row_0, LOW);
-
-      // Set audio output to 1
-      digitalWrite(select_a, LOW);
-      digitalWrite(select_b,LOW);
-      break;
-    case TWO:
-      // Activate LED 2
-      digitalWrite(led_col_0, HIGH);
-      digitalWrite(led_row_1, LOW);
-
-      // Set audio output to 2
-      digitalWrite(select_a, HIGH);
-      digitalWrite(select_b, LOW);
-      break;
-    case THREE:
-      // Activate LED 3
-      digitalWrite(led_col_1, HIGH);
-      digitalWrite(led_row_0, LOW);
-
-      // Set audio output to 3
-      digitalWrite(select_a, LOW);
-      digitalWrite(select_b, HIGH);
-      break;
-    case FOUR:
-      // Activate LED 4
-      digitalWrite(led_col_1, HIGH);
-      digitalWrite(led_row_1, LOW);
-
-      // Set audio output to 3
-      digitalWrite(select_a, HIGH);
-      digitalWrite(select_b, HIGH);
-      break;
-    default:
-      break;
-  }
+  digitalWrite(select_a, o.select_a);
+  digitalWrite(select_b, o.select_b);
 }
 
 void loop() {
   for(int col : cols) {
       for(int row: rows) {
         if(digitalRead(row) == HIGH) {
-          setPins(matrix[col][row]);
+          setPin(matrix[col][row]);
         }
       }
       delay(delay_in_micro_seconds/length_of_cols);

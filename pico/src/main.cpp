@@ -17,12 +17,11 @@ const int led_row_1 = 2;
 const int select_a = 19;
 const int select_b = 20;
 
-const Output matrix[length_of_cols][length_of_rows] = {{ one, three }, { two, four }};
-
 const Output one(LOW,LOW,HIGH,LOW,LOW,HIGH);
 const Output two(HIGH,LOW,HIGH,LOW,HIGH,LOW);
 const Output three(LOW,HIGH,LOW,LOW,HIGH,HIGH);
 const Output four(HIGH,HIGH,LOW,LOW,HIGH,HIGH);
+const Output matrix[length_of_cols][length_of_rows] = {{ one, three }, { two, four }};
 
 void setup() {
   for(int col : cols) {

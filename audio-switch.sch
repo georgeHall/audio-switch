@@ -533,28 +533,13 @@ F 3 "" H 6900 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6900 2300 6950 2300
-$Comp
-L power:+5V #PWR0110
-U 1 1 612E9A61
-P 7100 2750
-F 0 "#PWR0110" H 7100 2600 50  0001 C CNN
-F 1 "+5V" H 7115 2923 50  0000 C CNN
-F 2 "" H 7100 2750 50  0001 C CNN
-F 3 "" H 7100 2750 50  0001 C CNN
-	1    7100 2750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6900 2800 6900 2300
 Wire Wire Line
-	6900 2800 7450 2800
+	6900 2800 7350 2800
 Wire Wire Line
 	7450 2800 7450 2600
 Connection ~ 6900 2800
-Wire Wire Line
-	7100 2750 7350 2750
-Wire Wire Line
-	7350 2750 7350 2600
 Wire Wire Line
 	8300 1600 7950 1600
 Wire Wire Line
@@ -667,26 +652,11 @@ Connection ~ 6900 5150
 Wire Wire Line
 	7450 5150 7450 4950
 Wire Wire Line
-	6900 5150 7450 5150
+	6900 5150 7350 5150
 Wire Wire Line
 	6900 4650 6900 5150
 Wire Wire Line
 	6950 4650 6900 4650
-Wire Wire Line
-	7350 5100 7350 4950
-Wire Wire Line
-	7100 5100 7350 5100
-$Comp
-L power:+5V #PWR0111
-U 1 1 612F75A8
-P 7100 5100
-F 0 "#PWR0111" H 7100 4950 50  0001 C CNN
-F 1 "+5V" H 7115 5273 50  0000 C CNN
-F 2 "" H 7100 5100 50  0001 C CNN
-F 3 "" H 7100 5100 50  0001 C CNN
-	1    7100 5100
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0103
 U 1 1 6120BFC5
@@ -727,17 +697,6 @@ Text GLabel 6850 3850 0    50   Input ~ 0
 Select_B
 Text GLabel 6850 3750 0    50   Input ~ 0
 Select_A
-$Comp
-L Analog_Switch:CD4052B U3
-U 1 1 611155A3
-P 7450 4250
-F 0 "U3" H 7450 5131 50  0000 C CNN
-F 1 "CD4052B" H 7450 5040 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7600 3500 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 7430 4450 50  0001 C CNN
-	1    7450 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7950 3950 8200 3950
 Wire Wire Line
@@ -774,4 +733,25 @@ Wire Wire Line
 	7050 3900 7050 3950
 Wire Wire Line
 	7050 3950 7100 3950
+$Comp
+L Analog_Switch:CD4052B U3
+U 1 1 611155A3
+P 7450 4250
+F 0 "U3" H 7450 5131 50  0000 C CNN
+F 1 "CD4052B" H 7450 5040 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7600 3500 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 7430 4450 50  0001 C CNN
+	1    7450 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4950 7350 5150
+Connection ~ 7350 5150
+Wire Wire Line
+	7350 5150 7450 5150
+Connection ~ 7350 2800
+Wire Wire Line
+	7350 2800 7450 2800
+Wire Wire Line
+	7350 2600 7350 2800
 $EndSCHEMATC

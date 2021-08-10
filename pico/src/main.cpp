@@ -1,5 +1,4 @@
 #include <Arduino.h>
-
 #include "output.h"
 
 const int delay_in_micro_seconds = 20;

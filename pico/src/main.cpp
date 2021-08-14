@@ -1,4 +1,5 @@
 #include <Arduino.h>
+
 #include "classOutput.h"
 #include "helperInput.h"
 
@@ -12,23 +13,34 @@ const int length_of_rows = (sizeof(rows)/sizeof(*rows));
 const int select_a = 6; // Pico GPIO4
 const int select_b = 7; // Pico GPIO5
 
-const Output one(LOW,LOW);
-const Output two(HIGH,LOW);
-const Output three(LOW,HIGH);
-const Output four(HIGH,HIGH);
+const Output one = Output(LOW,LOW);
+const Output two = Output(HIGH,LOW);
+const Output three = Output(LOW,HIGH);
+const Output four = Output(HIGH,HIGH);
 const Output matrix[length_of_cols][length_of_rows] = {{ one, three }, { two, four }};
 
-void setupSwitchMatrix()
-{
-  for(int col : cols) {
-    pinMode(col, OUTPUT);
-  }
-  for(int row : rows) {
-    pinMode(row, INPUT_PULLDOWN);
-  }
-  pinMode(select_a, OUTPUT);
-  pinMode(select_b, OUTPUT);
+template<typename T, size_t N>
+size_t size_of_array( T (&_arr)[N]) {
+   return N;
 }
+
+void setupSwitchMatrix(int a, int b, const int *cols, const int *rows)
+{
+  int i;
+  int n = sizeof(cols)/sizeof(cols[0]);
+  for (i = 0; i < n; i++)
+  {
+    pinMode(cols[i], OUTPUT);
+  }
+  n = sizeof(rows)/sizeof(rows[0]);
+  for (i = 0; i < n; i++)
+  {
+    pinMode(rows[i], INPUT_PULLDOWN);
+  }
+  pinMode(a, OUTPUT);
+  pinMode(b, OUTPUT);
+}
+
 
 void setInput()
 {
@@ -45,7 +57,7 @@ void setInput()
 
 void setup()
 {
-  setupSwitchMatrix();
+  setupSwitchMatrix(select_a, select_b, cols, rows);
 }
 
 void loop()

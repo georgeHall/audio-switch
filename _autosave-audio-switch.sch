@@ -1,0 +1,649 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_RaspberryPi_and_Boards:Pico U1
+U 1 1 60FA7034
+P 1900 2050
+F 0 "U1" H 1900 3265 50  0000 C CNN
+F 1 "Pico" H 1900 3174 50  0000 C CNN
+F 2 "pi:RPi_Pico_SMD_TH" V 1900 2050 50  0001 C CNN
+F 3 "" H 1900 2050 50  0001 C CNN
+	1    1900 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 5700 6400 0    50   Input ~ 0
+Col0
+Text GLabel 6500 6400 0    50   Input ~ 0
+Col1
+Text GLabel 5000 7000 0    50   Input ~ 0
+Row0
+Text GLabel 5000 7550 0    50   Input ~ 0
+Row1
+Text GLabel 1050 1400 0    50   Input ~ 0
+Col0
+Text GLabel 1050 1500 0    50   Input ~ 0
+Col1
+Text GLabel 1050 1100 0    50   Input ~ 0
+Row0
+Text GLabel 1050 1200 0    50   Input ~ 0
+Row1
+Wire Wire Line
+	1050 1100 1200 1100
+Wire Wire Line
+	1050 1200 1200 1200
+Wire Wire Line
+	1050 1400 1200 1400
+Wire Wire Line
+	1200 1500 1050 1500
+$Comp
+L Connector:AudioJack4 J1
+U 1 1 610A361A
+P 5300 5000
+F 0 "J1" H 5257 5325 50  0000 C CNN
+F 1 "OUT_1" H 5257 5234 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 5300 5000 50  0001 C CNN
+F 3 "~" H 5300 5000 50  0001 C CNN
+	1    5300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack4 OUT_2
+U 1 1 610A696E
+P 5300 5700
+F 0 "OUT_2" H 5257 6025 50  0000 C CNN
+F 1 "AudioJack4_Out" H 5257 5934 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 5300 5700 50  0001 C CNN
+F 3 "~" H 5300 5700 50  0001 C CNN
+	1    5300 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4900 5750 4900
+Wire Wire Line
+	5750 4900 5750 5600
+Wire Wire Line
+	5750 5600 5500 5600
+Wire Wire Line
+	5500 5000 5800 5000
+Wire Wire Line
+	5800 5000 5800 5700
+Wire Wire Line
+	5800 5700 5500 5700
+Wire Wire Line
+	5500 5100 5850 5100
+Wire Wire Line
+	5850 5100 5850 5800
+Wire Wire Line
+	5850 5800 5500 5800
+Wire Wire Line
+	5500 5900 5900 5900
+Wire Wire Line
+	5900 5900 5900 5200
+Wire Wire Line
+	5900 5200 5500 5200
+Text GLabel 6050 4900 2    50   Input ~ 0
+Out_S
+Text GLabel 6050 5100 2    50   Input ~ 0
+Out_R1
+Text GLabel 6050 5000 2    50   Input ~ 0
+Out_R2
+Text GLabel 6050 5200 2    50   Input ~ 0
+Out_T
+Wire Wire Line
+	5900 5200 6050 5200
+Connection ~ 5900 5200
+Wire Wire Line
+	5850 5100 6050 5100
+Connection ~ 5850 5100
+Wire Wire Line
+	6050 5000 5800 5000
+Connection ~ 5800 5000
+Wire Wire Line
+	5750 4900 6050 4900
+Connection ~ 5750 4900
+Text GLabel 1050 1600 0    50   Input ~ 0
+Select_A
+Text GLabel 1050 1700 0    50   Input ~ 0
+Select_B
+$Comp
+L power:+5V #PWR0105
+U 1 1 61255361
+P 3150 1100
+F 0 "#PWR0105" H 3150 950 50  0001 C CNN
+F 1 "+5V" H 3165 1273 50  0000 C CNN
+F 2 "" H 3150 1100 50  0001 C CNN
+F 3 "" H 3150 1100 50  0001 C CNN
+	1    3150 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 6125B516
+P 3000 2800
+F 0 "#PWR0106" H 3000 2550 50  0001 C CNN
+F 1 "GND" H 3005 2627 50  0000 C CNN
+F 2 "" H 3000 2800 50  0001 C CNN
+F 3 "" H 3000 2800 50  0001 C CNN
+	1    3000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 61266FFA
+P 650 2800
+F 0 "#PWR0107" H 650 2550 50  0001 C CNN
+F 1 "GND" H 655 2627 50  0000 C CNN
+F 2 "" H 650 2800 50  0001 C CNN
+F 3 "" H 650 2800 50  0001 C CNN
+	1    650  2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  2800 1200 2800
+Connection ~ 650  2800
+Wire Wire Line
+	1200 1300 650  1300
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 6129B7C7
+P 3150 1400
+F 0 "#PWR0108" H 3150 1250 50  0001 C CNN
+F 1 "+3.3V" H 3165 1573 50  0000 C CNN
+F 2 "" H 3150 1400 50  0001 C CNN
+F 3 "" H 3150 1400 50  0001 C CNN
+	1    3150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  1300 650  1800
+Wire Wire Line
+	1200 1800 650  1800
+Connection ~ 650  1800
+Wire Wire Line
+	650  1800 650  2300
+Wire Wire Line
+	1200 2300 650  2300
+Connection ~ 650  2300
+Wire Wire Line
+	650  2300 650  2800
+$Comp
+L power:GNDA #PWR0109
+U 1 1 612E1F86
+P 3150 1800
+F 0 "#PWR0109" H 3150 1550 50  0001 C CNN
+F 1 "GNDA" H 3155 1627 50  0000 C CNN
+F 2 "" H 3150 1800 50  0001 C CNN
+F 3 "" H 3150 1800 50  0001 C CNN
+	1    3150 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_Switch:CD4052B U2
+U 1 1 6115692A
+P 1500 4250
+F 0 "U2" H 1500 5131 50  0000 C CNN
+F 1 "CD4052B" H 1500 5040 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 1650 3500 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 1480 4450 50  0001 C CNN
+	1    1500 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 900  3750 0    50   Input ~ 0
+Select_A
+Text GLabel 900  3850 0    50   Input ~ 0
+Select_B
+Wire Wire Line
+	900  3850 1000 3850
+Wire Wire Line
+	1000 3750 900  3750
+Wire Wire Line
+	900  4050 1000 4050
+Wire Wire Line
+	900  4550 1000 4550
+$Comp
+L power:+5V #PWR0102
+U 1 1 611F7A20
+P 1200 3550
+F 0 "#PWR0102" H 1200 3400 50  0001 C CNN
+F 1 "+5V" H 1215 3723 50  0000 C CNN
+F 2 "" H 1200 3550 50  0001 C CNN
+F 3 "" H 1200 3550 50  0001 C CNN
+	1    1200 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3550 1600 3550
+Text GLabel 900  4550 0    50   Input ~ 0
+Out_T
+Text GLabel 900  4050 0    50   Input ~ 0
+Out_R1
+$Comp
+L power:GND #PWR0104
+U 1 1 61211FF5
+P 950 5150
+F 0 "#PWR0104" H 950 4900 50  0001 C CNN
+F 1 "GND" H 955 4977 50  0000 C CNN
+F 2 "" H 950 5150 50  0001 C CNN
+F 3 "" H 950 5150 50  0001 C CNN
+	1    950  5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 5150 1500 5150
+Wire Wire Line
+	1500 5150 1500 4950
+Wire Wire Line
+	1400 4950 1400 5150
+Connection ~ 1400 5150
+Wire Wire Line
+	950  5150 1400 5150
+Wire Wire Line
+	950  4650 1000 4650
+Connection ~ 950  5150
+Wire Wire Line
+	950  5150 950  4650
+Wire Wire Line
+	4600 4250 2000 4250
+Wire Wire Line
+	3850 4150 2000 4150
+Wire Wire Line
+	3100 4050 2000 4050
+Wire Wire Line
+	2400 4450 2000 4450
+Wire Wire Line
+	2350 3950 2000 3950
+Wire Wire Line
+	4650 4750 4650 5450
+Wire Wire Line
+	4600 5350 4600 4250
+Wire Wire Line
+	4450 5150 4500 5150
+Wire Wire Line
+	3700 5150 3750 5150
+Wire Wire Line
+	2950 5150 3000 5150
+Wire Wire Line
+	2250 5150 2200 5150
+Wire Wire Line
+	2000 4750 4650 4750
+Wire Wire Line
+	3900 4650 2000 4650
+Wire Wire Line
+	3150 4550 2000 4550
+Wire Wire Line
+	4650 5450 4450 5450
+Wire Wire Line
+	4450 5350 4600 5350
+Wire Wire Line
+	2200 5350 2350 5350
+Wire Wire Line
+	2950 5350 3100 5350
+Wire Wire Line
+	3700 5350 3850 5350
+Wire Wire Line
+	3900 5450 3900 4650
+Wire Wire Line
+	3700 5450 3900 5450
+Wire Wire Line
+	3850 5350 3850 4150
+Wire Wire Line
+	3150 5450 3150 4550
+Wire Wire Line
+	2950 5450 3150 5450
+Wire Wire Line
+	3100 5350 3100 4050
+Wire Wire Line
+	2400 5450 2400 4450
+Wire Wire Line
+	2200 5450 2400 5450
+Wire Wire Line
+	2350 5350 2350 3950
+Wire Wire Line
+	4450 5250 4550 5250
+Wire Wire Line
+	3700 5250 3800 5250
+Wire Wire Line
+	2950 5250 3050 5250
+$Comp
+L Connector:AudioJack4 IN_2
+U 1 1 610D4D0F
+P 2750 5250
+F 0 "IN_2" H 2707 5575 50  0000 C CNN
+F 1 "AudioJack4_IN" H 2707 5484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 2750 5250 50  0001 C CNN
+F 3 "~" H 2750 5250 50  0001 C CNN
+	1    2750 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5250 2300 5250
+$Comp
+L Connector:AudioJack4 IN_4
+U 1 1 610D8F8B
+P 4250 5250
+F 0 "IN_4" H 4207 5575 50  0000 C CNN
+F 1 "AudioJack4_IN" H 4207 5484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 4250 5250 50  0001 C CNN
+F 3 "~" H 4250 5250 50  0001 C CNN
+	1    4250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack4 IN_3
+U 1 1 610D6D85
+P 3500 5250
+F 0 "IN_3" H 3457 5575 50  0000 C CNN
+F 1 "AudioJack4_IN" H 3457 5484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 3500 5250 50  0001 C CNN
+F 3 "~" H 3500 5250 50  0001 C CNN
+	1    3500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack4 IN_1
+U 1 1 610A4CF0
+P 2000 5250
+F 0 "IN_1" H 1957 5575 50  0000 C CNN
+F 1 "AudioJack4_IN" H 1957 5484 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 2000 5250 50  0001 C CNN
+F 3 "~" H 2000 5250 50  0001 C CNN
+	1    2000 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 7500 1500 7500
+Connection ~ 1400 7500
+Wire Wire Line
+	1400 7300 1400 7500
+$Comp
+L Analog_Switch:CD4052B U3
+U 1 1 611155A3
+P 1500 6600
+F 0 "U3" H 1500 7481 50  0000 C CNN
+F 1 "CD4052B" H 1500 7390 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 1650 5850 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 1480 6800 50  0001 C CNN
+	1    1500 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 6300 1150 6300
+Wire Wire Line
+	1100 6250 1100 6300
+Wire Wire Line
+	4550 7100 2000 7100
+Wire Wire Line
+	4550 5250 4550 7100
+Wire Wire Line
+	4500 6600 2000 6600
+Wire Wire Line
+	4500 5150 4500 6600
+Wire Wire Line
+	3800 7000 2000 7000
+Wire Wire Line
+	3800 5250 3800 7000
+Wire Wire Line
+	3750 6500 2000 6500
+Wire Wire Line
+	3750 5150 3750 6500
+Wire Wire Line
+	3050 6900 2000 6900
+Wire Wire Line
+	3050 5250 3050 6900
+Wire Wire Line
+	3000 6400 2000 6400
+Wire Wire Line
+	3000 5150 3000 6400
+Wire Wire Line
+	2300 6800 2000 6800
+Wire Wire Line
+	2300 5250 2300 6800
+Wire Wire Line
+	2250 6300 2250 5150
+Wire Wire Line
+	2000 6300 2250 6300
+Text GLabel 900  6100 0    50   Input ~ 0
+Select_A
+Text GLabel 900  6200 0    50   Input ~ 0
+Select_B
+Wire Wire Line
+	900  6200 1000 6200
+Wire Wire Line
+	1000 6100 900  6100
+Text GLabel 900  6400 0    50   Input ~ 0
+Out_S
+Text GLabel 900  6900 0    50   Input ~ 0
+Out_R2
+Wire Wire Line
+	900  6400 1000 6400
+Wire Wire Line
+	900  6900 1000 6900
+$Comp
+L power:+5V #PWR0101
+U 1 1 611F1804
+P 1200 5900
+F 0 "#PWR0101" H 1200 5750 50  0001 C CNN
+F 1 "+5V" H 1215 6073 50  0000 C CNN
+F 2 "" H 1200 5900 50  0001 C CNN
+F 3 "" H 1200 5900 50  0001 C CNN
+	1    1200 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5900 1600 5900
+$Comp
+L power:GND #PWR0103
+U 1 1 6120BFC5
+P 950 7500
+F 0 "#PWR0103" H 950 7250 50  0001 C CNN
+F 1 "GND" H 955 7327 50  0000 C CNN
+F 2 "" H 950 7500 50  0001 C CNN
+F 3 "" H 950 7500 50  0001 C CNN
+	1    950  7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 7000 950  7000
+Wire Wire Line
+	950  7000 950  7500
+Wire Wire Line
+	950  7500 1400 7500
+Wire Wire Line
+	1500 7500 1500 7300
+Connection ~ 950  7500
+$Comp
+L Device:D_Small D4
+U 1 1 60FDE3ED
+P 6100 7500
+F 0 "D4" H 6100 7707 50  0000 C CNN
+F 1 "D_Small" H 6100 7616 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6100 7500 50  0001 C CNN
+F 3 "~" V 6100 7500 50  0001 C CNN
+	1    6100 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D3
+U 1 1 60FB9127
+P 6100 6950
+F 0 "D3" H 6100 7157 50  0000 C CNN
+F 1 "D_Small" H 6100 7066 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6100 6950 50  0001 C CNN
+F 3 "~" V 6100 6950 50  0001 C CNN
+	1    6100 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D1
+U 1 1 60FA988D
+P 5300 6950
+F 0 "D1" H 5300 7157 50  0000 C CNN
+F 1 "D_Small" H 5300 7066 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5300 6950 50  0001 C CNN
+F 3 "~" V 5300 6950 50  0001 C CNN
+	1    5300 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D2
+U 1 1 60FDE3E0
+P 5300 7500
+F 0 "D2" H 5300 7707 50  0000 C CNN
+F 1 "D_Small" H 5300 7616 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5300 7500 50  0001 C CNN
+F 3 "~" V 5300 7500 50  0001 C CNN
+	1    5300 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX1
+U 1 1 61345CAC
+P 5550 6750
+F 0 "MX1" H 5583 6973 60  0000 C CNN
+F 1 "MX-NoLED" H 5583 6899 20  0000 C CNN
+F 2 "" H 4925 6725 60  0001 C CNN
+F 3 "" H 4925 6725 60  0001 C CNN
+	1    5550 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX3
+U 1 1 61349085
+P 6350 6750
+F 0 "MX3" H 6383 6973 60  0000 C CNN
+F 1 "MX-NoLED" H 6383 6899 20  0000 C CNN
+F 2 "" H 5725 6725 60  0001 C CNN
+F 3 "" H 5725 6725 60  0001 C CNN
+	1    6350 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX4
+U 1 1 6134D0E9
+P 6350 7300
+F 0 "MX4" H 6383 7523 60  0000 C CNN
+F 1 "MX-NoLED" H 6383 7449 20  0000 C CNN
+F 2 "" H 5725 7275 60  0001 C CNN
+F 3 "" H 5725 7275 60  0001 C CNN
+	1    6350 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX2
+U 1 1 6135157B
+P 5550 7300
+F 0 "MX2" H 5583 7523 60  0000 C CNN
+F 1 "MX-NoLED" H 5583 7449 20  0000 C CNN
+F 2 "" H 4925 7275 60  0001 C CNN
+F 3 "" H 4925 7275 60  0001 C CNN
+	1    5550 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 6400 5750 6400
+Wire Wire Line
+	5750 6400 5750 6700
+Wire Wire Line
+	5750 7250 5700 7250
+Wire Wire Line
+	5700 6700 5750 6700
+Connection ~ 5750 6700
+Wire Wire Line
+	5750 6700 5750 7250
+Wire Wire Line
+	6500 7250 6550 7250
+Wire Wire Line
+	6550 7250 6550 6700
+Wire Wire Line
+	6550 6400 6500 6400
+Wire Wire Line
+	6500 6700 6550 6700
+Connection ~ 6550 6700
+Wire Wire Line
+	6550 6700 6550 6400
+Wire Wire Line
+	6200 6950 6300 6950
+Wire Wire Line
+	6300 6950 6300 6900
+Wire Wire Line
+	6200 7500 6300 7500
+Wire Wire Line
+	6300 7500 6300 7450
+Wire Wire Line
+	5500 7450 5500 7500
+Wire Wire Line
+	5500 7500 5400 7500
+Wire Wire Line
+	5400 6950 5500 6950
+Wire Wire Line
+	5500 6950 5500 6900
+Wire Wire Line
+	5000 7000 5200 7000
+Wire Wire Line
+	5200 7000 5200 6950
+Wire Wire Line
+	5200 7000 6000 7000
+Wire Wire Line
+	6000 7000 6000 6950
+Connection ~ 5200 7000
+Wire Wire Line
+	5000 7550 5200 7550
+Wire Wire Line
+	6000 7550 6000 7500
+Wire Wire Line
+	5200 7500 5200 7550
+Connection ~ 5200 7550
+Wire Wire Line
+	5200 7550 6000 7550
+Wire Wire Line
+	1050 1600 1200 1600
+Wire Wire Line
+	1200 1700 1050 1700
+Text Label 800  2200 0    50   ~ 0
+I2S_data
+Wire Wire Line
+	800  2200 1200 2200
+Text Label 800  2400 0    50   ~ 0
+I2S_bck
+Text Label 800  2500 0    50   ~ 0
+I2S_lrck
+Wire Wire Line
+	800  2500 1200 2500
+Wire Wire Line
+	800  2400 1200 2400
+Wire Wire Line
+	2600 1400 3150 1400
+Wire Wire Line
+	3150 1100 2600 1100
+Wire Wire Line
+	2600 1300 3000 1300
+Wire Wire Line
+	3000 1300 3000 2300
+Wire Wire Line
+	2600 2800 3000 2800
+Connection ~ 3000 2800
+Wire Wire Line
+	2600 2300 3000 2300
+Connection ~ 3000 2300
+Wire Wire Line
+	3000 2300 3000 2800
+Wire Wire Line
+	2600 1800 3150 1800
+Text Label 2750 2200 0    50   ~ 0
+mute
+Wire Wire Line
+	2600 2200 2750 2200
+$EndSCHEMATC

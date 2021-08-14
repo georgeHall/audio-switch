@@ -1,5 +1,4 @@
 #include <Arduino.h>
-
 class Output {
     public:
         int select_a;

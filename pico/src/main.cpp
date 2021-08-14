@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "output.h"
+#include "classOutput.h"
 
 const int delay_in_micro_seconds = 20;
 
@@ -18,8 +18,8 @@ const Output four(HIGH,HIGH);
 const Output matrix[length_of_cols][length_of_rows] = {{ one, three }, { two, four }};
 
 
-
-void setupSwitchMatrix() {
+void setupSwitchMatrix()
+{
   for(int col : cols) {
     pinMode(col, OUTPUT);
   }
@@ -30,26 +30,31 @@ void setupSwitchMatrix() {
   pinMode(select_b, OUTPUT);
 }
 
-void setPin(Output o) {
+void setPin(Output o, int select_a, int select_b)
+{
   digitalWrite(select_a, o.select_a);
   digitalWrite(select_b, o.select_b);
 }
 
-void setInput() {
+void setInput()
+{
+  const int length_of_cols = (sizeof(cols)/sizeof(*cols)); 
   for(int col : cols) {
       for(int row: rows) {
         if(digitalRead(row) == HIGH) {
-          setPin(matrix[col][row]);
+          setPin(matrix[col][row], select_a, select_b);
         }
       }
       delay(delay_in_micro_seconds/length_of_cols);
     }
 }
 
-void setup() {
+void setup()
+{
   setupSwitchMatrix();
 }
 
-void loop() {
+void loop()
+{
   setInput();
 }

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -40,7 +40,7 @@ AR Path="/62D23AE5/62DAC2A2" Ref="U?"  Part="1"
 AR Path="/62D23469/62DAC2A2" Ref="U401"  Part="1" 
 F 0 "U401" H 5550 3850 50  0000 L CNN
 F 1 "LM386" H 5500 3950 50  0000 L CNN
-F 2 "Package_DIP:DIP-8-16_W7.62mm" H 5500 3800 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5500 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 5600 3900 50  0001 C CNN
 	1    5400 3700
 	1    0    0    -1  

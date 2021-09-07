@@ -1,0 +1,311 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title "Audio Switch with Amp"
+Date "2021-09-06"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 3950 2250 0    50   Input ~ 0
+Select_A
+Text GLabel 3950 2350 0    50   Input ~ 0
+Select_B
+Wire Wire Line
+	7450 3700 7500 3700
+Wire Wire Line
+	7450 4800 7450 3700
+Wire Wire Line
+	4900 4800 7450 4800
+Wire Wire Line
+	6700 3700 6750 3700
+Wire Wire Line
+	6700 4700 6700 3700
+Wire Wire Line
+	4900 4700 6700 4700
+Wire Wire Line
+	5950 3700 6000 3700
+Wire Wire Line
+	5950 4600 5950 3700
+Wire Wire Line
+	4900 4600 5950 4600
+Wire Wire Line
+	5200 4500 4900 4500
+Wire Wire Line
+	5200 3700 5200 4500
+Wire Wire Line
+	5250 3700 5200 3700
+Wire Wire Line
+	7400 3600 7500 3600
+Wire Wire Line
+	7400 4300 7400 3600
+Wire Wire Line
+	4900 4300 7400 4300
+Wire Wire Line
+	6650 3600 6750 3600
+Wire Wire Line
+	6650 4200 6650 3600
+Wire Wire Line
+	4900 4200 6650 4200
+Wire Wire Line
+	5900 3600 6000 3600
+Wire Wire Line
+	5900 4100 5900 3600
+Wire Wire Line
+	4900 4100 5900 4100
+Wire Wire Line
+	5150 4000 4900 4000
+Wire Wire Line
+	5150 3600 5150 4000
+Wire Wire Line
+	5250 3600 5150 3600
+Wire Wire Line
+	7400 3500 7500 3500
+Wire Wire Line
+	7400 3050 7400 3500
+Wire Wire Line
+	4900 3050 7400 3050
+Wire Wire Line
+	6650 3500 6750 3500
+Wire Wire Line
+	6650 2950 6650 3500
+Wire Wire Line
+	4900 2950 6650 2950
+Wire Wire Line
+	5900 3500 6000 3500
+Wire Wire Line
+	5900 2850 5900 3500
+Wire Wire Line
+	4900 2850 5900 2850
+Wire Wire Line
+	5150 3500 5250 3500
+Wire Wire Line
+	5150 2750 5150 3500
+Wire Wire Line
+	4900 2750 5150 2750
+Wire Wire Line
+	7450 3400 7500 3400
+Wire Wire Line
+	7450 2550 7450 3400
+Wire Wire Line
+	4900 2550 7450 2550
+Wire Wire Line
+	6700 3400 6750 3400
+Wire Wire Line
+	6700 2450 6700 3400
+Wire Wire Line
+	4900 2450 6700 2450
+Wire Wire Line
+	5950 2350 4900 2350
+Wire Wire Line
+	5950 3400 5950 2350
+Wire Wire Line
+	6000 3400 5950 3400
+Wire Wire Line
+	5200 3400 5250 3400
+Wire Wire Line
+	5200 2250 5200 3400
+Wire Wire Line
+	4900 2250 5200 2250
+$Comp
+L Connector:AudioJack4 IN_?
+U 1 1 626E2528
+P 7700 3600
+AR Path="/626E2528" Ref="IN_?"  Part="1" 
+AR Path="/626D4311/626E2528" Ref="IN_304"  Part="1" 
+F 0 "IN_304" H 7657 3925 50  0000 C CNN
+F 1 "AudioJack4_IN" H 7657 3834 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 7700 3600 50  0001 C CNN
+F 3 "~" H 7700 3600 50  0001 C CNN
+	1    7700 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 626E252E
+P 4500 3250
+AR Path="/626E252E" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E252E" Ref="#PWR0306"  Part="1" 
+F 0 "#PWR0306" H 4500 3000 50  0001 C CNN
+F 1 "GND" H 4505 3077 50  0000 C CNN
+F 2 "" H 4500 3250 50  0001 C CNN
+F 3 "" H 4500 3250 50  0001 C CNN
+	1    4500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 626E2534
+P 4450 2000
+AR Path="/626E2534" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E2534" Ref="#PWR0304"  Part="1" 
+F 0 "#PWR0304" H 4450 1850 50  0001 C CNN
+F 1 "+5V" H 4465 2173 50  0000 C CNN
+F 2 "" H 4450 2000 50  0001 C CNN
+F 3 "" H 4450 2000 50  0001 C CNN
+	1    4450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx-GEORGE:DG509A U?
+U 1 1 626E253A
+P 4200 2100
+AR Path="/626E253A" Ref="U?"  Part="1" 
+AR Path="/626D4311/626E253A" Ref="U301"  Part="1" 
+F 0 "U301" H 4150 2300 50  0000 C CNN
+F 1 "DG509A" H 4150 2200 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 4500 2550 50  0001 C CNN
+F 3 "" H 4500 2550 50  0001 C CNN
+	1    4200 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 626E2540
+P 4100 2750
+AR Path="/626E2540" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E2540" Ref="#PWR0302"  Part="1" 
+F 0 "#PWR0302" H 4100 2600 50  0001 C CNN
+F 1 "+5V" H 4115 2923 50  0000 C CNN
+F 2 "" H 4100 2750 50  0001 C CNN
+F 3 "" H 4100 2750 50  0001 C CNN
+	1    4100 2750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3950 4100 0    50   Input ~ 0
+Select_B
+Text GLabel 3950 4000 0    50   Input ~ 0
+Select_A
+$Comp
+L power:GND #PWR?
+U 1 1 626E2548
+P 4500 5000
+AR Path="/626E2548" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E2548" Ref="#PWR0307"  Part="1" 
+F 0 "#PWR0307" H 4500 4750 50  0001 C CNN
+F 1 "GND" H 4505 4827 50  0000 C CNN
+F 2 "" H 4500 5000 50  0001 C CNN
+F 3 "" H 4500 5000 50  0001 C CNN
+	1    4500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 626E254E
+P 4450 3750
+AR Path="/626E254E" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E254E" Ref="#PWR0305"  Part="1" 
+F 0 "#PWR0305" H 4450 3600 50  0001 C CNN
+F 1 "+5V" H 4465 3923 50  0000 C CNN
+F 2 "" H 4450 3750 50  0001 C CNN
+F 3 "" H 4450 3750 50  0001 C CNN
+	1    4450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx-GEORGE:DG509A U?
+U 1 1 626E2554
+P 4200 3850
+AR Path="/626E2554" Ref="U?"  Part="1" 
+AR Path="/626D4311/626E2554" Ref="U302"  Part="1" 
+F 0 "U302" H 4150 4050 50  0000 C CNN
+F 1 "DG509A" H 4150 3950 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 4500 4300 50  0001 C CNN
+F 3 "" H 4500 4300 50  0001 C CNN
+	1    4200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 626E255A
+P 4100 4500
+AR Path="/626E255A" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/626E255A" Ref="#PWR0303"  Part="1" 
+F 0 "#PWR0303" H 4100 4350 50  0001 C CNN
+F 1 "+5V" H 4115 4673 50  0000 C CNN
+F 2 "" H 4100 4500 50  0001 C CNN
+F 3 "" H 4100 4500 50  0001 C CNN
+	1    4100 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack4 IN_?
+U 1 1 626E2560
+P 5450 3600
+AR Path="/626E2560" Ref="IN_?"  Part="1" 
+AR Path="/626D4311/626E2560" Ref="IN_301"  Part="1" 
+F 0 "IN_301" H 5407 3925 50  0000 C CNN
+F 1 "AudioJack4_IN" H 5407 3834 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 5450 3600 50  0001 C CNN
+F 3 "~" H 5450 3600 50  0001 C CNN
+	1    5450 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack4 IN_?
+U 1 1 626E2566
+P 6200 3600
+AR Path="/626E2566" Ref="IN_?"  Part="1" 
+AR Path="/626D4311/626E2566" Ref="IN_302"  Part="1" 
+F 0 "IN_302" H 6157 3925 50  0000 C CNN
+F 1 "AudioJack4_IN" H 6157 3834 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 6200 3600 50  0001 C CNN
+F 3 "~" H 6200 3600 50  0001 C CNN
+	1    6200 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack4 IN_?
+U 1 1 626E256C
+P 6950 3600
+AR Path="/626E256C" Ref="IN_?"  Part="1" 
+AR Path="/626D4311/626E256C" Ref="IN_303"  Part="1" 
+F 0 "IN_303" H 6907 3925 50  0000 C CNN
+F 1 "AudioJack4_IN" H 6907 3834 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 6950 3600 50  0001 C CNN
+F 3 "~" H 6950 3600 50  0001 C CNN
+	1    6950 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 2250 4100 2250
+Wire Wire Line
+	4100 2350 3950 2350
+Wire Wire Line
+	3950 2500 4100 2500
+Wire Wire Line
+	4100 2600 3950 2600
+Wire Wire Line
+	3950 4350 4100 4350
+Wire Wire Line
+	3950 4100 4100 4100
+Wire Wire Line
+	4100 4000 3950 4000
+Text GLabel 3950 2600 0    50   Input ~ 0
+Input_Right
+Text GLabel 3950 2500 0    50   Input ~ 0
+Input_Left
+Text GLabel 3950 4350 0    50   Input ~ 0
+Mic
+$Comp
+L power:GNDS #PWR?
+U 1 1 629A0D99
+P 3550 4250
+AR Path="/629A0D99" Ref="#PWR?"  Part="1" 
+AR Path="/626D4311/629A0D99" Ref="#PWR0301"  Part="1" 
+F 0 "#PWR0301" H 3550 4000 50  0001 C CNN
+F 1 "GNDS" H 3555 4077 50  0000 C CNN
+F 2 "" H 3550 4250 50  0001 C CNN
+F 3 "" H 3550 4250 50  0001 C CNN
+	1    3550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4250 3550 4250
+$EndSCHEMATC

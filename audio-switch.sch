@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Sheet 1 5
+Title "Audio Switch with Amp"
+Date "2021-09-06"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -14,774 +14,110 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 74xx:7402 U4
-U 1 1 61312183
-P 6100 4550
-F 0 "U4" H 6100 4875 50  0000 C CNN
-F 1 "7402" H 6100 4784 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn7402" H 6100 4550 50  0001 C CNN
-	1    6100 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:7402 U4
-U 2 1 6131303A
-P 6100 5100
-F 0 "U4" H 6100 5425 50  0000 C CNN
-F 1 "7402" H 6100 5334 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 5100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn7402" H 6100 5100 50  0001 C CNN
-	2    6100 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:7402 U4
-U 3 1 61316CF4
-P 6100 5650
-F 0 "U4" H 6100 5975 50  0000 C CNN
-F 1 "7402" H 6100 5884 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 5650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn7402" H 6100 5650 50  0001 C CNN
-	3    6100 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:7402 U4
-U 4 1 61319A86
-P 6100 6200
-F 0 "U4" H 6100 6525 50  0000 C CNN
-F 1 "7402" H 6100 6434 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 6200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn7402" H 6100 6200 50  0001 C CNN
-	4    6100 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 4550 6500 4550
-Wire Wire Line
-	6400 5100 6400 4750
-Wire Wire Line
-	6400 4750 5800 4750
-Wire Wire Line
-	5800 4850 6500 4850
-Wire Wire Line
-	6500 4850 6500 4550
-Wire Wire Line
-	6400 5650 6500 5650
-Wire Wire Line
-	5800 5950 6500 5950
-Wire Wire Line
-	6500 5950 6500 5650
-Wire Wire Line
-	5800 5850 6400 5850
-Wire Wire Line
-	6400 5850 6400 6200
-Wire Wire Line
-	5800 5750 5800 5850
-Wire Wire Line
-	5800 6100 5800 5950
-Wire Wire Line
-	5800 4750 5800 4650
-Wire Wire Line
-	5800 5000 5800 4850
-$Comp
-L 74xx:7402 U4
-U 5 1 6131E1C4
-P 4950 5400
-F 0 "U4" H 5180 5446 50  0000 L CNN
-F 1 "7402" H 5180 5355 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 4950 5400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn7402" H 4950 5400 50  0001 C CNN
-	5    4950 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0112
-U 1 1 613D7AA2
-P 4950 4850
-F 0 "#PWR0112" H 4950 4700 50  0001 C CNN
-F 1 "+5V" H 4965 5023 50  0000 C CNN
-F 2 "" H 4950 4850 50  0001 C CNN
-F 3 "" H 4950 4850 50  0001 C CNN
-	1    4950 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 613DC198
-P 4950 5950
-F 0 "#PWR0111" H 4950 5700 50  0001 C CNN
-F 1 "GND" H 4955 5777 50  0000 C CNN
-F 2 "" H 4950 5950 50  0001 C CNN
-F 3 "" H 4950 5950 50  0001 C CNN
-	1    4950 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 4850 4950 4900
-Wire Wire Line
-	4950 5900 4950 5950
-Connection ~ 5750 1000
-Wire Wire Line
-	5750 1000 6050 1000
-Connection ~ 5800 1100
-Wire Wire Line
-	6050 1100 5800 1100
-Connection ~ 5850 1200
-Wire Wire Line
-	5850 1200 6050 1200
-Connection ~ 5900 1300
-Wire Wire Line
-	5900 1300 6050 1300
-Text GLabel 6050 1300 2    50   Input ~ 0
-Out_T
-Text GLabel 6050 1100 2    50   Input ~ 0
-Out_R2
-Text GLabel 6050 1200 2    50   Input ~ 0
-Out_R1
-Text GLabel 6050 1000 2    50   Input ~ 0
-Out_S
-Wire Wire Line
-	5900 1300 5500 1300
-Wire Wire Line
-	5900 2000 5900 1300
-Wire Wire Line
-	5500 2000 5900 2000
-Wire Wire Line
-	5850 1900 5500 1900
-Wire Wire Line
-	5850 1200 5850 1900
-Wire Wire Line
-	5500 1200 5850 1200
-Wire Wire Line
-	5800 1800 5500 1800
-Wire Wire Line
-	5800 1100 5800 1800
-Wire Wire Line
-	5500 1100 5800 1100
-Wire Wire Line
-	5750 1700 5500 1700
-Wire Wire Line
-	5750 1000 5750 1700
-Wire Wire Line
-	5500 1000 5750 1000
-$Comp
-L Connector:AudioJack4 OUT_2
+L Connector:AudioJack4 OUT_102
 U 1 1 610A696E
-P 5300 1800
-F 0 "OUT_2" H 5257 2125 50  0000 C CNN
-F 1 "OUT_2" H 5257 2034 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 5300 1800 50  0001 C CNN
-F 3 "~" H 5300 1800 50  0001 C CNN
-	1    5300 1800
+P 2150 2600
+F 0 "OUT_102" H 2107 2925 50  0000 C CNN
+F 1 "OUT_2" H 2107 2834 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 2150 2600 50  0001 C CNN
+F 3 "~" H 2150 2600 50  0001 C CNN
+	1    2150 2600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack4 OUT_1
+L Connector:AudioJack4 OUT_101
 U 1 1 610A361A
-P 5300 1100
-F 0 "OUT_1" H 5257 1425 50  0000 C CNN
-F 1 "OUT_1" H 5257 1334 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 5300 1100 50  0001 C CNN
-F 3 "~" H 5300 1100 50  0001 C CNN
-	1    5300 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0113
-U 1 1 61C1CF8F
-P 3800 6150
-F 0 "#PWR0113" H 3800 5900 50  0001 C CNN
-F 1 "GND" H 3805 5977 50  0000 C CNN
-F 2 "" H 3800 6150 50  0001 C CNN
-F 3 "" H 3800 6150 50  0001 C CNN
-	1    3800 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 61C1EFC8
-P 4400 5900
-F 0 "R4" H 4459 5946 50  0000 L CNN
-F 1 "R_Small" H 4459 5855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4400 5900 50  0001 C CNN
-F 3 "~" H 4400 5900 50  0001 C CNN
-	1    4400 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 61C1FD44
-P 4000 5900
-F 0 "R3" H 4059 5946 50  0000 L CNN
-F 1 "R_Small" H 4059 5855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4000 5900 50  0001 C CNN
-F 3 "~" H 4000 5900 50  0001 C CNN
-	1    4000 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R2
-U 1 1 61C28212
-P 3600 5900
-F 0 "R2" H 3659 5946 50  0000 L CNN
-F 1 "R_Small" H 3659 5855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3600 5900 50  0001 C CNN
-F 3 "~" H 3600 5900 50  0001 C CNN
-	1    3600 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R1
-U 1 1 61C304DD
-P 3200 5900
-F 0 "R1" H 3259 5946 50  0000 L CNN
-F 1 "R_Small" H 3259 5855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3200 5900 50  0001 C CNN
-F 3 "~" H 3200 5900 50  0001 C CNN
-	1    3200 5900
+P 2150 1900
+F 0 "OUT_101" H 2107 2225 50  0000 C CNN
+F 1 "OUT_1" H 2107 2134 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 2150 1900 50  0001 C CNN
+F 3 "~" H 2150 1900 50  0001 C CNN
+	1    2150 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3200 6000 3200 6100
+	2350 2500 2400 2500
 Wire Wire Line
-	3200 6100 3600 6100
+	2400 2500 2400 2200
 Wire Wire Line
-	3800 6100 3800 6150
+	2400 1800 2350 1800
 Wire Wire Line
-	3600 6000 3600 6100
-Connection ~ 3600 6100
+	2350 1900 2450 1900
 Wire Wire Line
-	3600 6100 3800 6100
+	2450 2600 2350 2600
 Wire Wire Line
-	4400 6000 4400 6100
+	2350 2700 2500 2700
 Wire Wire Line
-	4400 6100 4000 6100
-Connection ~ 3800 6100
+	2500 2000 2350 2000
 Wire Wire Line
-	4000 6000 4000 6100
-Connection ~ 4000 6100
+	2550 2800 2350 2800
 Wire Wire Line
-	4000 6100 3800 6100
-Text GLabel 6600 4550 2    50   Input ~ 0
-Select_A
-Text GLabel 6600 5650 2    50   Input ~ 0
-Select_B
+	2350 2100 2550 2100
 Wire Wire Line
-	6500 4550 6600 4550
-Connection ~ 6500 4550
+	2550 2100 2550 2500
 Wire Wire Line
-	6500 5650 6600 5650
-Connection ~ 6500 5650
-Text GLabel 5800 4450 0    50   Input ~ 0
-Select_A_HIGH
-Text GLabel 5800 5550 0    50   Input ~ 0
-Select_B_HIGH
-Text GLabel 5800 5200 0    50   Input ~ 0
-Select_A_LOW
-Text GLabel 5800 6300 0    50   Input ~ 0
-Select_B_LOW
-Text GLabel 4000 5800 1    50   Input ~ 0
-Select_B_HIGH
-Text GLabel 4400 5800 1    50   Input ~ 0
-Select_B_LOW
-Text GLabel 3600 5800 1    50   Input ~ 0
-Select_A_LOW
-Text GLabel 3200 5800 1    50   Input ~ 0
-Select_A_HIGH
-Text GLabel 2550 5850 3    50   Input ~ 0
-Select_A_HIGH
-Text GLabel 750  5850 3    50   Input ~ 0
-Select_A_LOW
-Text GLabel 1650 5850 3    50   Input ~ 0
-Select_B_LOW
-Text GLabel 2850 5850 3    50   Input ~ 0
-Select_B_HIGH
-Text GLabel 1350 5850 3    50   Input ~ 0
-Select_A_HIGH
-Text GLabel 1950 5850 3    50   Input ~ 0
-Select_A_LOW
-Text GLabel 1050 5850 3    50   Input ~ 0
-Select_B_LOW
-Text GLabel 2250 5850 3    50   Input ~ 0
-Select_B_HIGH
+	2500 2000 2500 2400
 Wire Wire Line
-	2000 5000 2300 5000
-Connection ~ 2000 5000
+	2400 2200 2650 2200
+Connection ~ 2400 2200
 Wire Wire Line
-	2000 4900 2000 5000
+	2400 2200 2400 1800
 Wire Wire Line
-	1700 5000 2000 5000
-Connection ~ 1700 5000
+	2650 2500 2550 2500
+Connection ~ 2550 2500
 Wire Wire Line
-	1700 5250 1700 5000
+	2550 2500 2550 2800
 Wire Wire Line
-	2300 5000 2900 5000
-Connection ~ 2300 5000
+	2650 2400 2500 2400
+Connection ~ 2500 2400
 Wire Wire Line
-	2300 5250 2300 5000
-Wire Wire Line
-	2900 5000 2900 5250
-Wire Wire Line
-	1100 5000 1700 5000
-Wire Wire Line
-	1100 5250 1100 5000
-Wire Wire Line
-	2700 5550 2550 5550
-Connection ~ 2700 5550
-Wire Wire Line
-	2700 5450 2700 5550
-Wire Wire Line
-	2850 5550 2700 5550
-Wire Wire Line
-	2550 5550 2550 5650
-Wire Wire Line
-	2850 5650 2850 5550
+	2500 2400 2500 2700
+$Sheet
+S 5350 4050 1350 800 
+U 626D31E9
+F0 "select" 50
+F1 "select.sch" 50
+$EndSheet
+$Sheet
+S 5900 1650 1700 800 
+U 626D4311
+F0 "input" 50
+F1 "input.sch" 50
+$EndSheet
+Text GLabel 2650 2400 2    50   Input ~ 0
+Out_Right
+Text GLabel 2650 2500 2    50   Input ~ 0
+Out_Left
+Text GLabel 2650 2200 2    50   Input ~ 0
+Mic
 $Comp
-L Device:D_Small D8
-U 1 1 61664FD1
-P 2850 5750
-F 0 "D8" V 2850 5900 50  0000 R CNN
-F 1 "D_Small" H 3000 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2850 5750 50  0001 C CNN
-F 3 "~" V 2850 5750 50  0001 C CNN
-	1    2850 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Small D7
-U 1 1 61664FCB
-P 2550 5750
-F 0 "D7" V 2550 5900 50  0000 R CNN
-F 1 "D_Small" H 2700 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2550 5750 50  0001 C CNN
-F 3 "~" V 2550 5750 50  0001 C CNN
-	1    2550 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX4
-U 1 1 61664FC5
-P 2750 5300
-F 0 "MX4" H 2783 5523 60  0000 C CNN
-F 1 "MX-NoLED" H 2783 5449 20  0000 C CNN
-F 2 "MX_Only:MXOnly-1U" H 2125 5275 60  0001 C CNN
-F 3 "" H 2125 5275 60  0001 C CNN
-	1    2750 5300
+L power:GNDS #PWR0101
+U 1 1 6297ECA3
+P 3200 2300
+F 0 "#PWR0101" H 3200 2050 50  0001 C CNN
+F 1 "GNDS" H 3205 2127 50  0000 C CNN
+F 2 "" H 3200 2300 50  0001 C CNN
+F 3 "" H 3200 2300 50  0001 C CNN
+	1    3200 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 5550 1950 5550
-Connection ~ 2100 5550
-Wire Wire Line
-	2100 5450 2100 5550
-Wire Wire Line
-	2250 5550 2100 5550
-Wire Wire Line
-	1950 5550 1950 5650
-Wire Wire Line
-	2250 5650 2250 5550
-$Comp
-L Device:D_Small D6
-U 1 1 6165F540
-P 2250 5750
-F 0 "D6" V 2250 5900 50  0000 R CNN
-F 1 "D_Small" H 2400 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2250 5750 50  0001 C CNN
-F 3 "~" V 2250 5750 50  0001 C CNN
-	1    2250 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Small D5
-U 1 1 6165F53A
-P 1950 5750
-F 0 "D5" V 1950 5900 50  0000 R CNN
-F 1 "D_Small" H 2100 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1950 5750 50  0001 C CNN
-F 3 "~" V 1950 5750 50  0001 C CNN
-	1    1950 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX3
-U 1 1 6165F534
-P 2150 5300
-F 0 "MX3" H 2183 5523 60  0000 C CNN
-F 1 "MX-NoLED" H 2183 5449 20  0000 C CNN
-F 2 "MX_Only:MXOnly-1U" H 1525 5275 60  0001 C CNN
-F 3 "" H 1525 5275 60  0001 C CNN
-	1    2150 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 5550 1350 5550
-Connection ~ 1500 5550
-Wire Wire Line
-	1500 5450 1500 5550
-Wire Wire Line
-	1650 5550 1500 5550
-Wire Wire Line
-	1350 5550 1350 5650
-Wire Wire Line
-	1650 5650 1650 5550
-$Comp
-L Device:D_Small D4
-U 1 1 61659CDA
-P 1650 5750
-F 0 "D4" V 1650 5900 50  0000 R CNN
-F 1 "D_Small" H 1800 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1650 5750 50  0001 C CNN
-F 3 "~" V 1650 5750 50  0001 C CNN
-	1    1650 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Small D3
-U 1 1 61659CD4
-P 1350 5750
-F 0 "D3" V 1350 5900 50  0000 R CNN
-F 1 "D_Small" H 1500 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1350 5750 50  0001 C CNN
-F 3 "~" V 1350 5750 50  0001 C CNN
-	1    1350 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX2
-U 1 1 61659CCE
-P 1550 5300
-F 0 "MX2" H 1583 5523 60  0000 C CNN
-F 1 "MX-NoLED" H 1583 5449 20  0000 C CNN
-F 2 "MX_Only:MXOnly-1U" H 925 5275 60  0001 C CNN
-F 3 "" H 925 5275 60  0001 C CNN
-	1    1550 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	900  5550 750  5550
-Connection ~ 900  5550
-Wire Wire Line
-	900  5450 900  5550
-Wire Wire Line
-	1050 5550 900  5550
-Wire Wire Line
-	750  5550 750  5650
-Wire Wire Line
-	1050 5650 1050 5550
-$Comp
-L Device:D_Small D2
-U 1 1 61B09FA8
-P 1050 5750
-F 0 "D2" V 1050 5900 50  0000 R CNN
-F 1 "D_Small" H 1200 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1050 5750 50  0001 C CNN
-F 3 "~" V 1050 5750 50  0001 C CNN
-	1    1050 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Small D1
-U 1 1 615D40FB
-P 750 5750
-F 0 "D1" V 750 5900 50  0000 R CNN
-F 1 "D_Small" H 900 5650 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 750 5750 50  0001 C CNN
-F 3 "~" V 750 5750 50  0001 C CNN
-	1    750  5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX1
-U 1 1 612D4ABB
-P 950 5300
-F 0 "MX1" H 983 5523 60  0000 C CNN
-F 1 "MX-NoLED" H 983 5449 20  0000 C CNN
-F 2 "MX_Only:MXOnly-1U" H 325 5275 60  0001 C CNN
-F 3 "" H 325 5275 60  0001 C CNN
-	1    950  5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0110
-U 1 1 614046B7
-P 2000 4900
-F 0 "#PWR0110" H 2000 4750 50  0001 C CNN
-F 1 "+5V" H 2015 5073 50  0000 C CNN
-F 2 "" H 2000 4900 50  0001 C CNN
-F 3 "" H 2000 4900 50  0001 C CNN
-	1    2000 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:AudioJack4 IN_2
-U 1 1 610D4D0F
-P 10050 2500
-F 0 "IN_2" H 10007 2825 50  0000 C CNN
-F 1 "AudioJack4_IN" H 10007 2734 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 10050 2500 50  0001 C CNN
-F 3 "~" H 10050 2500 50  0001 C CNN
-	1    10050 2500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:AudioJack4 IN_1
-U 1 1 610D8F8B
-P 9300 2500
-F 0 "IN_1" H 9257 2825 50  0000 C CNN
-F 1 "AudioJack4_IN" H 9257 2734 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 9300 2500 50  0001 C CNN
-F 3 "~" H 9300 2500 50  0001 C CNN
-	1    9300 2500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:AudioJack4 IN_3
-U 1 1 610D6D85
-P 10800 2500
-F 0 "IN_3" H 10757 2825 50  0000 C CNN
-F 1 "AudioJack4_IN" H 10757 2734 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 10800 2500 50  0001 C CNN
-F 3 "~" H 10800 2500 50  0001 C CNN
-	1    10800 2500
-	-1   0    0    1   
-$EndComp
-Text GLabel 6850 2850 0    50   Input ~ 0
-Select_B
-Text GLabel 6850 2750 0    50   Input ~ 0
-Select_A
-$Comp
-L Analog_Switch:CD4052B U3
-U 1 1 611155A3
-P 7350 3250
-F 0 "U3" H 7600 3900 50  0000 C CNN
-F 1 "CD4052B" H 7150 3900 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 7500 2500 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 7330 3450 50  0001 C CNN
-	1    7350 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6950 2950 7000 2950
-Wire Wire Line
-	6950 2900 6950 2950
-Text GLabel 6850 3550 0    50   Input ~ 0
-Out_S
-Text GLabel 6850 3050 0    50   Input ~ 0
-Out_R2
-$Comp
-L power:+5V #PWR0101
-U 1 1 611F1804
-P 7450 2550
-F 0 "#PWR0101" H 7450 2400 50  0001 C CNN
-F 1 "+5V" H 7465 2723 50  0000 C CNN
-F 2 "" H 7450 2550 50  0001 C CNN
-F 3 "" H 7450 2550 50  0001 C CNN
-	1    7450 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 6120BFC5
-P 7300 4000
-F 0 "#PWR0103" H 7300 3750 50  0001 C CNN
-F 1 "GND" H 7305 3827 50  0000 C CNN
-F 2 "" H 7300 4000 50  0001 C CNN
-F 3 "" H 7300 4000 50  0001 C CNN
-	1    7300 4000
-	1    0    0    -1  
-$EndComp
-Text GLabel 6850 1100 0    50   Input ~ 0
-Select_B
-Text GLabel 6850 1000 0    50   Input ~ 0
-Select_A
-$Comp
-L power:GND #PWR0104
-U 1 1 61211FF5
-P 7300 2250
-F 0 "#PWR0104" H 7300 2000 50  0001 C CNN
-F 1 "GND" H 7305 2077 50  0000 C CNN
-F 2 "" H 7300 2250 50  0001 C CNN
-F 3 "" H 7300 2250 50  0001 C CNN
-	1    7300 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0102
-U 1 1 611F7A20
-P 7450 800
-F 0 "#PWR0102" H 7450 650 50  0001 C CNN
-F 1 "+5V" H 7465 973 50  0000 C CNN
-F 2 "" H 7450 800 50  0001 C CNN
-F 3 "" H 7450 800 50  0001 C CNN
-	1    7450 800 
-	1    0    0    -1  
-$EndComp
-Text GLabel 6850 1300 0    50   Input ~ 0
-Out_T
-Text GLabel 6850 1800 0    50   Input ~ 0
-Out_R1
-$Comp
-L Analog_Switch:CD4052B U2
-U 1 1 6115692A
-P 7350 1500
-F 0 "U2" H 7600 2150 50  0000 C CNN
-F 1 "CD4052B" H 7150 2150 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 7500 750 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 7330 1700 50  0001 C CNN
-	1    7350 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0105
-U 1 1 61994769
-P 6800 1950
-F 0 "#PWR0105" H 6800 1700 50  0001 C CNN
-F 1 "GND" H 6805 1777 50  0000 C CNN
-F 2 "" H 6800 1950 50  0001 C CNN
-F 3 "" H 6800 1950 50  0001 C CNN
-	1    6800 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 2200 7300 2200
-Wire Wire Line
-	7300 2250 7300 2200
-Connection ~ 7300 2200
-Wire Wire Line
-	7300 2200 7250 2200
-Wire Wire Line
-	6800 1950 6800 1900
-Wire Wire Line
-	6800 1900 6850 1900
-$Comp
-L power:GND #PWR0106
-U 1 1 619D9AD8
-P 6800 3700
-F 0 "#PWR0106" H 6800 3450 50  0001 C CNN
-F 1 "GND" H 6805 3527 50  0000 C CNN
-F 2 "" H 6800 3700 50  0001 C CNN
-F 3 "" H 6800 3700 50  0001 C CNN
-	1    6800 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 3950 7300 3950
-Wire Wire Line
-	7300 4000 7300 3950
-Connection ~ 7300 3950
-Wire Wire Line
-	7300 3950 7250 3950
-Wire Wire Line
-	6800 3700 6800 3650
-Wire Wire Line
-	6800 3650 6850 3650
-$Comp
-L Connector:AudioJack4 IN_0
-U 1 1 610A4CF0
-P 8550 2500
-F 0 "IN_0" H 8507 2825 50  0000 C CNN
-F 1 "AudioJack4_IN" H 8507 2734 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_PJ320E_Horizontal" H 8550 2500 50  0001 C CNN
-F 3 "~" H 8550 2500 50  0001 C CNN
-	1    8550 2500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8350 2300 8300 2300
-Wire Wire Line
-	8300 2300 8300 1200
-Wire Wire Line
-	8300 1200 7850 1200
-Wire Wire Line
-	8350 2400 8250 2400
-Wire Wire Line
-	8250 2400 8250 1700
-Wire Wire Line
-	8250 1700 7850 1700
-Wire Wire Line
-	8350 2600 8300 2600
-Wire Wire Line
-	8300 2600 8300 3450
-Wire Wire Line
-	8300 3450 7850 3450
-Wire Wire Line
-	8350 2500 8250 2500
-Wire Wire Line
-	8250 2500 8250 2950
-Wire Wire Line
-	8250 2950 7850 2950
-Wire Wire Line
-	9100 2300 9050 2300
-Wire Wire Line
-	9050 2300 9050 1300
-Wire Wire Line
-	9050 1300 7850 1300
-Wire Wire Line
-	9100 2400 9000 2400
-Wire Wire Line
-	9000 2400 9000 1800
-Wire Wire Line
-	9000 1800 7850 1800
-Wire Wire Line
-	9000 3050 7850 3050
-Wire Wire Line
-	9000 2500 9100 2500
-Wire Wire Line
-	9000 2500 9000 3050
-Wire Wire Line
-	9100 2600 9050 2600
-Wire Wire Line
-	9050 2600 9050 3550
-Wire Wire Line
-	9050 3550 7850 3550
-Wire Wire Line
-	9850 2300 9800 2300
-Wire Wire Line
-	9800 2300 9800 1400
-Wire Wire Line
-	9800 1400 7850 1400
-Wire Wire Line
-	10600 2300 10550 2300
-Wire Wire Line
-	10550 2300 10550 1500
-Wire Wire Line
-	10550 1500 7850 1500
-Wire Wire Line
-	9850 2400 9750 2400
-Wire Wire Line
-	9750 2400 9750 1900
-Wire Wire Line
-	9750 1900 7850 1900
-Wire Wire Line
-	10600 2400 10500 2400
-Wire Wire Line
-	10500 2400 10500 2000
-Wire Wire Line
-	10500 2000 7850 2000
-Wire Wire Line
-	9850 2600 9800 2600
-Wire Wire Line
-	9800 2600 9800 3650
-Wire Wire Line
-	9800 3650 7850 3650
-Wire Wire Line
-	7850 3750 10550 3750
-Wire Wire Line
-	10550 3750 10550 2600
-Wire Wire Line
-	10550 2600 10600 2600
-Wire Wire Line
-	10600 2500 10500 2500
-Wire Wire Line
-	10500 2500 10500 3250
-Wire Wire Line
-	10500 3250 7850 3250
-Wire Wire Line
-	7850 3150 9750 3150
-Wire Wire Line
-	9750 3150 9750 2500
-Wire Wire Line
-	9750 2500 9850 2500
+	2450 1900 2450 2300
+Wire Wire Line
+	3200 2300 2450 2300
+Connection ~ 2450 2300
+Wire Wire Line
+	2450 2300 2450 2600
+$Sheet
+S 9950 600  1200 850 
+U 62D23469
+F0 "Right_Amp" 50
+F1 "Right_Amp.sch" 50
+$EndSheet
+$Sheet
+S 8700 600  1200 850 
+U 62D23AE5
+F0 "Left_Amp" 50
+F1 "Left_Amp.sch" 50
+$EndSheet
 $EndSCHEMATC

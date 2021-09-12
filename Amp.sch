@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -13,19 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:R_POT_Dual_Separate RV?
-U 1 1 62D66189
-P 7050 3200
-AR Path="/62D66189" Ref="RV?"  Part="2" 
-AR Path="/62D23AE5/62D66189" Ref="VOL401"  Part="1" 
-F 0 "VOL401" H 6980 3246 50  0000 R CNN
-F 1 "10k" H 6980 3155 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 7050 3200 50  0001 C CNN
-F 3 "~" H 7050 3200 50  0001 C CNN
-	1    7050 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Amplifier_Audio:LM386 U?
 U 1 1 62D6618F
@@ -326,19 +313,6 @@ F 3 "" H 7800 2150 50  0001 C CNN
 $EndComp
 Text GLabel 6700 2800 0    50   Input ~ 0
 Input_Left
-$Comp
-L Device:R_POT_Dual_Separate RV?
-U 1 1 62D6621F
-P 8100 4200
-AR Path="/62D6621F" Ref="RV?"  Part="2" 
-AR Path="/62D23AE5/62D6621F" Ref="GAIN401"  Part="1" 
-F 0 "GAIN401" H 8030 4246 50  0000 R CNN
-F 1 "10k" H 8030 4155 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 8100 4200 50  0001 C CNN
-F 3 "~" H 8100 4200 50  0001 C CNN
-	1    8100 4200
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	9250 3300 9250 3400
 Connection ~ 7800 2150
@@ -360,19 +334,6 @@ Wire Wire Line
 Connection ~ 8550 3300
 Wire Wire Line
 	8550 3300 8750 3300
-$Comp
-L Device:R_POT_Dual_Separate RV?
-U 1 1 62D66231
-P 8550 4400
-AR Path="/62D66231" Ref="RV?"  Part="2" 
-AR Path="/62D23AE5/62D66231" Ref="BASS401"  Part="1" 
-F 0 "BASS401" H 8480 4446 50  0000 R CNN
-F 1 "10k" H 8480 4355 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 8550 4400 50  0001 C CNN
-F 3 "~" H 8550 4400 50  0001 C CNN
-	1    8550 4400
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7900 4400 8400 4400
 $Comp
@@ -410,27 +371,13 @@ Out_Right
 Text GLabel 2500 2950 0    50   Input ~ 0
 Input_Right
 $Comp
-L Device:R_POT_Dual_Separate Volume?
-U 1 1 613ED379
-P 2850 3350
-AR Path="/613ED379" Ref="Volume?"  Part="2" 
-AR Path="/62D23AE5/613ED379" Ref="Volume?"  Part="2" 
-AR Path="/62D23469/613ED379" Ref="Volume?"  Part="1" 
-F 0 "Volume?" H 2780 3396 50  0000 R CNN
-F 1 "10k" H 2780 3305 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 2850 3350 50  0001 C CNN
-F 3 "~" H 2850 3350 50  0001 C CNN
-	1    2850 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Amplifier_Audio:LM386 U?
 U 1 1 613ED37F
 P 3700 3450
 AR Path="/613ED37F" Ref="U?"  Part="1" 
-AR Path="/62D23AE5/613ED37F" Ref="U?"  Part="1" 
+AR Path="/62D23AE5/613ED37F" Ref="U401"  Part="1" 
 AR Path="/62D23469/613ED37F" Ref="U?"  Part="1" 
-F 0 "U?" H 3850 3600 50  0000 L CNN
+F 0 "U401" H 3850 3600 50  0000 L CNN
 F 1 "LM386" H 3800 3700 50  0000 L CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 3800 3550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 3900 3650 50  0001 C CNN
@@ -442,9 +389,9 @@ L Device:R R?
 U 1 1 613ED385
 P 3950 3000
 AR Path="/613ED385" Ref="R?"  Part="1" 
-AR Path="/62D23AE5/613ED385" Ref="R?"  Part="1" 
+AR Path="/62D23AE5/613ED385" Ref="R401"  Part="1" 
 AR Path="/62D23469/613ED385" Ref="R?"  Part="1" 
-F 0 "R?" V 4157 3000 50  0000 C CNN
+F 0 "R401" V 4157 3000 50  0000 C CNN
 F 1 "10k" V 4066 3000 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3880 3000 50  0001 C CNN
 F 3 "~" H 3950 3000 50  0001 C CNN
@@ -456,9 +403,9 @@ L power:GND #PWR?
 U 1 1 613ED38B
 P 4600 3100
 AR Path="/613ED38B" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED38B" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED38B" Ref="#PWR0407"  Part="1" 
 AR Path="/62D23469/613ED38B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4600 2850 50  0001 C CNN
+F 0 "#PWR0407" H 4600 2850 50  0001 C CNN
 F 1 "GND" H 4605 2927 50  0000 C CNN
 F 2 "" H 4600 3100 50  0001 C CNN
 F 3 "" H 4600 3100 50  0001 C CNN
@@ -474,9 +421,9 @@ L Device:CP C?
 U 1 1 613ED393
 P 4350 3000
 AR Path="/613ED393" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED393" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED393" Ref="C406"  Part="1" 
 AR Path="/62D23469/613ED393" Ref="C?"  Part="1" 
-F 0 "C?" V 4605 3000 50  0000 C CNN
+F 0 "C406" V 4605 3000 50  0000 C CNN
 F 1 "10u" V 4514 3000 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4388 2850 50  0001 C CNN
 F 3 "~" H 4350 3000 50  0001 C CNN
@@ -494,9 +441,9 @@ L power:GND #PWR?
 U 1 1 613ED39C
 P 3600 4400
 AR Path="/613ED39C" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED39C" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED39C" Ref="#PWR0405"  Part="1" 
 AR Path="/62D23469/613ED39C" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3600 4150 50  0001 C CNN
+F 0 "#PWR0405" H 3600 4150 50  0001 C CNN
 F 1 "GND" H 3605 4227 50  0000 C CNN
 F 2 "" H 3600 4400 50  0001 C CNN
 F 3 "" H 3600 4400 50  0001 C CNN
@@ -508,9 +455,9 @@ L power:GND #PWR?
 U 1 1 613ED3A2
 P 3300 4400
 AR Path="/613ED3A2" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED3A2" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED3A2" Ref="#PWR0403"  Part="1" 
 AR Path="/62D23469/613ED3A2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3300 4150 50  0001 C CNN
+F 0 "#PWR0403" H 3300 4150 50  0001 C CNN
 F 1 "GND" H 3305 4227 50  0000 C CNN
 F 2 "" H 3300 4400 50  0001 C CNN
 F 3 "" H 3300 4400 50  0001 C CNN
@@ -522,9 +469,9 @@ L Device:C_Small C?
 U 1 1 613ED3A8
 P 3450 3900
 AR Path="/613ED3A8" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3A8" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3A8" Ref="C404"  Part="1" 
 AR Path="/62D23469/613ED3A8" Ref="C?"  Part="1" 
-F 0 "C?" V 3550 3900 50  0000 C CNN
+F 0 "C404" V 3550 3900 50  0000 C CNN
 F 1 "470p" V 3650 3900 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3450 3900 50  0001 C CNN
 F 3 "~" H 3450 3900 50  0001 C CNN
@@ -552,9 +499,9 @@ L Device:C_Small C?
 U 1 1 613ED3B7
 P 3350 2700
 AR Path="/613ED3B7" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3B7" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3B7" Ref="C403"  Part="1" 
 AR Path="/62D23469/613ED3B7" Ref="C?"  Part="1" 
-F 0 "C?" V 3579 2700 50  0000 C CNN
+F 0 "C403" V 3579 2700 50  0000 C CNN
 F 1 "0.1u" V 3488 2700 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3350 2700 50  0001 C CNN
 F 3 "~" H 3350 2700 50  0001 C CNN
@@ -566,9 +513,9 @@ L Device:CP C?
 U 1 1 613ED3BD
 P 3350 2300
 AR Path="/613ED3BD" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3BD" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3BD" Ref="C402"  Part="1" 
 AR Path="/62D23469/613ED3BD" Ref="C?"  Part="1" 
-F 0 "C?" V 3095 2300 50  0000 C CNN
+F 0 "C402" V 3095 2300 50  0000 C CNN
 F 1 "100u" V 3186 2300 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3388 2150 50  0001 C CNN
 F 3 "~" H 3350 2300 50  0001 C CNN
@@ -586,9 +533,9 @@ L power:GND #PWR?
 U 1 1 613ED3C6
 P 3100 2800
 AR Path="/613ED3C6" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED3C6" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED3C6" Ref="#PWR0402"  Part="1" 
 AR Path="/62D23469/613ED3C6" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3100 2550 50  0001 C CNN
+F 0 "#PWR0402" H 3100 2550 50  0001 C CNN
 F 1 "GND" H 3105 2627 50  0000 C CNN
 F 2 "" H 3100 2800 50  0001 C CNN
 F 3 "" H 3100 2800 50  0001 C CNN
@@ -609,9 +556,9 @@ L Device:C_Small C?
 U 1 1 613ED3D1
 P 3100 3150
 AR Path="/613ED3D1" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3D1" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3D1" Ref="C401"  Part="1" 
 AR Path="/62D23469/613ED3D1" Ref="C?"  Part="1" 
-F 0 "C?" H 3192 3196 50  0000 L CNN
+F 0 "C401" H 3192 3196 50  0000 L CNN
 F 1 "0.1u" H 3192 3105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3100 3150 50  0001 C CNN
 F 3 "~" H 3100 3150 50  0001 C CNN
@@ -628,9 +575,9 @@ L Device:CP C?
 U 1 1 613ED3DA
 P 5050 3700
 AR Path="/613ED3DA" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3DA" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3DA" Ref="C409"  Part="1" 
 AR Path="/62D23469/613ED3DA" Ref="C?"  Part="1" 
-F 0 "C?" V 4795 3700 50  0000 C CNN
+F 0 "C409" V 4795 3700 50  0000 C CNN
 F 1 "1000u" V 4886 3700 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5088 3550 50  0001 C CNN
 F 3 "~" H 5050 3700 50  0001 C CNN
@@ -642,9 +589,9 @@ L Device:C_Small C?
 U 1 1 613ED3E0
 P 4550 3600
 AR Path="/613ED3E0" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3E0" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3E0" Ref="C408"  Part="1" 
 AR Path="/62D23469/613ED3E0" Ref="C?"  Part="1" 
-F 0 "C?" H 4642 3646 50  0000 L CNN
+F 0 "C408" H 4642 3646 50  0000 L CNN
 F 1 "0.1u" H 4642 3555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4550 3600 50  0001 C CNN
 F 3 "~" H 4550 3600 50  0001 C CNN
@@ -656,9 +603,9 @@ L Device:R R?
 U 1 1 613ED3E6
 P 4550 3900
 AR Path="/613ED3E6" Ref="R?"  Part="1" 
-AR Path="/62D23AE5/613ED3E6" Ref="R?"  Part="1" 
+AR Path="/62D23AE5/613ED3E6" Ref="R402"  Part="1" 
 AR Path="/62D23469/613ED3E6" Ref="R?"  Part="1" 
-F 0 "R?" H 4620 3946 50  0000 L CNN
+F 0 "R402" H 4620 3946 50  0000 L CNN
 F 1 "10" H 4620 3855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4480 3900 50  0001 C CNN
 F 3 "~" H 4550 3900 50  0001 C CNN
@@ -670,9 +617,9 @@ L power:GND #PWR?
 U 1 1 613ED3EC
 P 4550 4100
 AR Path="/613ED3EC" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED3EC" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED3EC" Ref="#PWR0406"  Part="1" 
 AR Path="/62D23469/613ED3EC" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4550 3850 50  0001 C CNN
+F 0 "#PWR0406" H 4550 3850 50  0001 C CNN
 F 1 "GND" H 4555 3927 50  0000 C CNN
 F 2 "" H 4550 4100 50  0001 C CNN
 F 3 "" H 4550 4100 50  0001 C CNN
@@ -684,9 +631,9 @@ L Device:C_Small C?
 U 1 1 613ED3F2
 P 4350 3600
 AR Path="/613ED3F2" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED3F2" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED3F2" Ref="C407"  Part="1" 
 AR Path="/62D23469/613ED3F2" Ref="C?"  Part="1" 
-F 0 "C?" H 4442 3646 50  0000 L CNN
+F 0 "C407" H 4442 3646 50  0000 L CNN
 F 1 "0.033u" H 4442 3555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4350 3600 50  0001 C CNN
 F 3 "~" H 4350 3600 50  0001 C CNN
@@ -698,9 +645,9 @@ L power:GND #PWR?
 U 1 1 613ED3F8
 P 2850 3650
 AR Path="/613ED3F8" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED3F8" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED3F8" Ref="#PWR0401"  Part="1" 
 AR Path="/62D23469/613ED3F8" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2850 3400 50  0001 C CNN
+F 0 "#PWR0401" H 2850 3400 50  0001 C CNN
 F 1 "GND" H 2855 3477 50  0000 C CNN
 F 2 "" H 2850 3650 50  0001 C CNN
 F 3 "" H 2850 3650 50  0001 C CNN
@@ -728,28 +675,14 @@ L power:+5V #PWR?
 U 1 1 613ED407
 P 3600 2300
 AR Path="/613ED407" Ref="#PWR?"  Part="1" 
-AR Path="/62D23AE5/613ED407" Ref="#PWR?"  Part="1" 
+AR Path="/62D23AE5/613ED407" Ref="#PWR0404"  Part="1" 
 AR Path="/62D23469/613ED407" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3600 2150 50  0001 C CNN
+F 0 "#PWR0404" H 3600 2150 50  0001 C CNN
 F 1 "+5V" H 3615 2473 50  0000 C CNN
 F 2 "" H 3600 2300 50  0001 C CNN
 F 3 "" H 3600 2300 50  0001 C CNN
 	1    3600 2300
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT_Dual_Separate Gain?
-U 1 1 613ED40D
-P 3900 4350
-AR Path="/613ED40D" Ref="Gain?"  Part="2" 
-AR Path="/62D23AE5/613ED40D" Ref="Gain?"  Part="2" 
-AR Path="/62D23469/613ED40D" Ref="Gain?"  Part="1" 
-F 0 "Gain?" H 3830 4396 50  0000 R CNN
-F 1 "10k" H 3830 4305 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 3900 4350 50  0001 C CNN
-F 3 "~" H 3900 4350 50  0001 C CNN
-	1    3900 4350
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5050 3450 5050 3550
@@ -772,20 +705,6 @@ Wire Wire Line
 Connection ~ 4350 3450
 Wire Wire Line
 	4350 3450 4550 3450
-$Comp
-L Device:R_POT_Dual_Separate Bass?
-U 1 1 613ED41F
-P 4350 4550
-AR Path="/613ED41F" Ref="Bass?"  Part="2" 
-AR Path="/62D23AE5/613ED41F" Ref="Bass?"  Part="2" 
-AR Path="/62D23469/613ED41F" Ref="Bass?"  Part="1" 
-F 0 "Bass?" H 4280 4596 50  0000 R CNN
-F 1 "10k" H 4280 4505 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 4350 4550 50  0001 C CNN
-F 3 "~" H 4350 4550 50  0001 C CNN
-	1    4350 4550
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3700 4550 4200 4550
 $Comp
@@ -793,9 +712,9 @@ L Device:CP C?
 U 1 1 613ED426
 P 3900 4000
 AR Path="/613ED426" Ref="C?"  Part="1" 
-AR Path="/62D23AE5/613ED426" Ref="C?"  Part="1" 
+AR Path="/62D23AE5/613ED426" Ref="C405"  Part="1" 
 AR Path="/62D23469/613ED426" Ref="C?"  Part="1" 
-F 0 "C?" H 3782 3954 50  0000 R CNN
+F 0 "C405" H 3782 3954 50  0000 R CNN
 F 1 " 10u" H 3782 4045 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3938 3850 50  0001 C CNN
 F 3 "~" H 3900 4000 50  0001 C CNN
@@ -819,4 +738,70 @@ Wire Wire Line
 	3800 3800 3900 3800
 Wire Wire Line
 	4350 4400 4350 3700
+$Comp
+L Device:R_POT_Dual_Separate VOL301
+U 1 1 6142F444
+P 2850 3350
+F 0 "VOL301" H 2781 3396 50  0000 R CNN
+F 1 "10k" H 2781 3305 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 2850 3350 50  0001 C CNN
+F 3 "~" H 2850 3350 50  0001 C CNN
+	1    2850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_Dual_Separate VOL301
+U 2 1 6142FCC8
+P 7050 3200
+F 0 "VOL301" H 6980 3246 50  0000 R CNN
+F 1 "10k" H 6980 3155 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 7050 3200 50  0001 C CNN
+F 3 "~" H 7050 3200 50  0001 C CNN
+	2    7050 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_Dual_Separate BASS301
+U 1 1 61432E8F
+P 4350 4550
+F 0 "BASS301" H 4280 4504 50  0000 R CNN
+F 1 "10k" H 4280 4595 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 4350 4550 50  0001 C CNN
+F 3 "~" H 4350 4550 50  0001 C CNN
+	1    4350 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_Dual_Separate BASS301
+U 2 1 614333BE
+P 8550 4400
+F 0 "BASS301" H 8480 4354 50  0000 R CNN
+F 1 "10k" H 8480 4445 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 8550 4400 50  0001 C CNN
+F 3 "~" H 8550 4400 50  0001 C CNN
+	2    8550 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_Dual_Separate GAIN301
+U 1 1 61435DDE
+P 3900 4350
+F 0 "GAIN301" H 3830 4396 50  0000 R CNN
+F 1 "10k" H 3830 4305 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 3900 4350 50  0001 C CNN
+F 3 "~" H 3900 4350 50  0001 C CNN
+	1    3900 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_Dual_Separate GAIN301
+U 2 1 61436551
+P 8100 4200
+F 0 "GAIN301" H 8031 4246 50  0000 R CNN
+F 1 "10k" H 8031 4155 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 8100 4200 50  0001 C CNN
+F 3 "~" H 8100 4200 50  0001 C CNN
+	2    8100 4200
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

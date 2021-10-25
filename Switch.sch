@@ -374,8 +374,6 @@ Wire Wire Line
 	3650 3900 3650 3950
 Wire Wire Line
 	3650 3950 4450 3950
-Wire Wire Line
-	3900 3700 4450 3700
 NoConn ~ 4900 1450
 NoConn ~ 4900 3200
 Text Label 4100 3800 0    50   ~ 0
@@ -393,4 +391,6 @@ F 3 "~" H 2050 3400 50  0001 C CNN
 	1    2050 3400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3900 3700 4450 3700
 $EndSCHEMATC

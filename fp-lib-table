@@ -6,4 +6,5 @@
   (lib (name pi)(type KiCad)(uri ${KIPRJMOD}/libs/RP_Silicon_KiCad/KiCadLibraries/MCU_RaspberryPi_and_Boards.pretty)(options "")(descr ""))
   (lib (name CD4052BM)(type KiCad)(uri ${KIPRJMOD}/libs/CD4052BM/CD4052BM.pretty)(options "")(descr ""))
   (lib (name Package_DIP)(type KiCad)(uri ${KIPRJMOD}/libs/Package_DIP.pretty)(options "")(descr ""))
+  (lib (name audio-switch)(type KiCad)(uri /Users/georgehall/workspace/kicad/george_custom_footprint/audio-switch.pretty)(options "")(descr ""))
 )
